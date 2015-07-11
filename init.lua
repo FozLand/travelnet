@@ -98,7 +98,7 @@ travelnet.restore_data = function()
    local file = io.open( path, "r" );
    if( file ) then
       local data = file:read("*all");
-      travelnet.targets = minetest.deserialize( data );
+      travelnet.targets = minetest.deserialize( data ) or {};
       file:close();
    else
       print("[Mod travelnet] Error: Savefile '"..tostring( path ).."' not found.");
