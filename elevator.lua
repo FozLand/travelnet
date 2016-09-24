@@ -89,7 +89,9 @@ minetest.register_node("travelnet:elevator", {
     on_destruct = function(pos)
             local p = {x=pos.x, y=pos.y+1, z=pos.z}
 	    minetest.remove_node(p)
-    end
+    end,
+
+    on_blast = function() end
 })
 
 minetest.register_alias("travelnet:elevator_top", "air")
