@@ -90,6 +90,7 @@ minetest.register_node("travelnet:travelnet", {
        return minetest.item_place(itemstack, placer, pointed_thing);
     end,
 
+    on_blast = function() end
 })
 
 --[
